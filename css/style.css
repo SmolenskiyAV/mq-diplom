@@ -1,0 +1,672 @@
+@font-face {
+  font-family: OpenSans;
+  src: url("https://netology-code.github.io/html-2-diploma/sources/fonts/OpenSans-Regular.woff");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: OpenSans;
+  src: url("https://netology-code.github.io/html-2-diploma/sources/fonts/OpenSans-Bold.woff");
+  font-weight: 700;
+}
+
+/*================================================================*/
+@media (max-width: 768px) { /* стили для планшета */
+	.welcome {
+		background-image: url("../images/banner-bg-tablet.jpg");
+	}
+}
+/*================================================================*/
+
+@media (max-width: 360px) { /* стили для телефонов */
+	.welcome {
+		background-image: url("../images/banner-mobile.jpg");
+	}
+}
+/*================================================================*/
+
+body {
+  font-family: OpenSans, sans-serif; 
+  margin: 0px;
+}
+
+* {
+  /*сбрасываем дефолтные стили броузера*/
+  list-style-type: none;
+  padding-left: 0px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+p {
+  margin-top: 10px;
+}
+
+.welcome {
+  display: flex;
+  margin-right: 0px;
+  padding-right: 0px;
+  padding-bottom: 120px;
+  background-image: url("../images/banner-bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-color: #000000;
+  position: relative;
+  z-index: 0;
+}
+
+.welcome::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #000000;
+  opacity: 0.45;
+  z-index: -1;
+}
+.welcome-title {
+  text-transform: uppercase;
+  font-size: 45px;
+  line-height: 75px;
+  color: #ffffff;
+  max-width: 687px; 
+  margin: auto;
+  margin-top: 70px;
+}
+
+.trends { /* ### ТРЕНДЫ ### */
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+}
+.trends-title {
+  text-align: center;
+  margin: auto;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: black;
+  width: 100%;
+  height: 125px;
+  margin: auto;
+  line-height: 125px;
+}
+.trends-title::after {
+  content: "";
+  display: block;
+  width: 70px;
+  height: 4px;
+  background: #b59f5b;
+  margin-top: -40px;
+  margin-right: auto;
+  margin-left: auto;
+  opacity: 0.3;
+}
+.trends_content {
+	display: flex;
+	height: 320px;
+}
+
+article.trend_block {
+  display: flex;
+  margin-right: 5px;
+  padding-right: 10px;
+  padding-left: 10px;
+  padding-bottom: 10px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-color: #000000;
+  position: relative;
+  z-index: 0;
+  width: 25%;
+  align-items: flex-end;
+}
+article.a1 {
+  background-image: url("../images/trend1.jpg");
+} 
+article.a2 {
+  background-image: url("../images/trend2.jpg");
+} 
+article.a3 {
+  background-image: url("../images/trend3.jpg");
+} 
+article.a4 {
+  background-image: url("../images/trend4.jpg");
+} 
+
+article.trend_block::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #000000;
+  opacity: 0.45;
+  z-index: -1;
+}
+
+.trends_tegs_plus_title {
+	display: flex;
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-bottom: 10px;
+	border: 2px solid #b59f5b;
+	flex-direction: column; 
+	padding: 20px;
+}
+.trend-tegs {
+	width: 100%;
+}
+.trend-tegs li {
+  display: inline-block;
+  
+}
+.trend-tegs a {
+	text-decoration: none;
+  display: block;
+  position: relative;
+  margin-right: 10px;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #b59f5b;
+  margin-bottom: 10px;
+}
+.trend-tegs a:hover {
+  text-decoration: underline;
+}
+
+.trend-title {
+	color: white;
+	
+}
+.trend-title:hover {
+  color: #b59f5b;
+}
+/*-------------------------------------*/
+
+.main_label {
+  text-align: center;
+  width: 100%;
+}
+
+.navbar-logo { /*### ЛОГОТИП ###*/
+  display: block;
+  width: 180px;
+}
+
+.menu-link {
+  list-style: none;
+}
+.menu-link li {
+  display: inline-block;
+}
+.menu-link a {
+  text-decoration: none;
+  margin-left: 37px;
+  font-size: 13px;
+  text-transform: uppercase; 
+  color: white;
+}
+
+.top-line {
+  max-width: 1200px;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 25px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  padding: 0px 15px; 
+  box-sizing: border-box;
+  align-items: center; 
+}
+
+.main_plus_aside {
+  max-width: 1200px;
+  display: flex;
+  flex-wrap: nowrap;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 60px; 
+  padding: 0px 15px; 
+  box-sizing: border-box; 
+}
+
+.main {
+  flex: 1;
+  margin-left: 0;
+  margin-right: 100px; 
+  margin-top: 0px;
+  padding: 15px;
+}
+
+/* ###свойства поста в главном блоке### */
+.post_main {
+  display: flex;
+  margin-bottom: 15px; 
+}
+.post_main_pic {
+  /*картинка поста в гл.блоке*/
+  padding: 5px;
+}
+.post-img {
+  width: 380px; 
+  object-fit: contain;
+}
+.post_main_textblock {
+  /*текстовая часть поста в гл.блоке*/
+  padding-left: 10px;
+  font-size: 15px; 
+  margin-left: 20px; 
+}
+
+.post-main-tegs li {
+  display: inline-block;
+}
+.post-main-tegs a {
+  text-decoration: none;
+  display: block;
+  position: relative;
+  margin-right: 10px;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #b59f5b;
+  margin-bottom: 10px;
+}
+.post-main-tegs a:hover {
+  text-decoration: underline;
+}
+.post-main-head {
+  color: black;
+  font-size: 20px;
+  text-transform: uppercase; 
+  margin-bottom: 30px;
+  max-width: 330px;
+}
+.post-main-head:hover {
+  color: #b59f5b;
+}
+.post-main-date_author {
+  display: flex;
+  margin-bottom: 50px;
+}
+.post-main-date {
+  font-size: 12px;
+  color: #888888;
+}
+.post-main-author {
+  font-size: 12px;
+  font-weight: bold;
+  color: black;
+  margin-left: 15px; 
+}
+.post-main-content {
+  font-size: 15px;
+  line-height: 22px;
+  color: black;
+}
+/*-------------------------------------*/
+
+.aside {
+  width: 270px;
+  align-items: center;
+  padding: 15px;
+}
+
+.aside-title {
+  text-align: center;
+  margin: auto;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: black;
+}
+.aside-title::after {
+  content: "";
+  display: block;
+  width: 70px;
+  height: 4px;
+  background: #b59f5b;
+  margin-top: 10px;
+  margin-right: auto;
+  margin-left: auto;
+  opacity: 0.3;
+}
+
+/* ###свойства поста в боковом блоке### */
+.post-aside {
+  display: flex;
+  margin-top: 20px;
+  margin-right: 0px;
+}
+
+.post_aside_date {
+  font-size: 12px;
+  color: #888888; 
+}
+
+.post_aside_textblock {
+  padding: 0px;
+  font-size: 12px; 
+}
+
+.post_aside_head {
+  margin-top: 5px;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: black;
+  margin-right: 0px;
+}
+.post_aside_head:hover {
+   color: #b59f5b;
+}
+
+.post_aside_pic {
+  margin-right: 15px; 
+}
+.aside-img {
+  width: 70px;
+  object-fit: contain;
+}
+/*-------------------------------------*/
+
+.visually-hidden {
+  width: 1px;
+  height: 1px;
+  clip: rect(1px, 1px, 1px, 1px);
+  position: absolute;
+}
+
+/* ### ПОИСКОВАЯ ФОРМА ### */
+.aside-search {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  display: flex;
+  height: 28px;
+
+  padding-left: 0px;
+  padding-right: 0px;
+
+  margin-top: 25px;
+  margin-bottom: 60px;
+  margin-right: 0px;
+
+  border: none;
+  align-items: center;
+
+  font-size: 14px;
+  font-family: Arial, sans-serif;
+  color: #333333;
+}
+.search {
+  flex-grow: 1; 
+  height: 45px;
+  padding-left: 15px;
+  padding-right: 15px; 
+  border: none;
+  background-color: #f4f7f6; 
+  font-size: 13px;
+}
+.search-picture {
+  width: 45px;
+  height: 45px;
+  background-image: url(../svg/search.svg);
+  background-size: 15px;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  background-color: #b59f5b;
+  cursor: pointer;
+}
+.search-picture:hover {
+  background-color: #323232;
+}
+/*-------------------------------------*/
+
+/* ### ФОРМА БОКОВОЙ ПАНЕЛИ ПОДПИСКА ### */
+.aside_mailform {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 30px;
+  border: none;
+  height: 165px;
+}
+.email {
+  box-sizing: border-box;
+  padding-left: 15px;
+  padding-right: 15px; 
+  border: none;
+  width: 100%;
+  height: 45px;
+  background-color: #f4f7f6;
+}
+.button-email {
+  /*кнопка ПОДПИСАТЬСЯ*/
+  border: none;
+  padding: auto;
+  background-color: #b59f5b;
+  width: 100%;
+  height: 45px;
+  font-family: inherit;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: white;
+  margin-top: 25px;
+  margin-bottom: 60px;
+  cursor: pointer;
+}
+.button-email:hover {
+  background-color: #323232;
+}
+/*--------------------------------------*/
+
+/* ### ДАШБОРД БОКОВОЙ ПАНЕЛИ ТЕГИ ### */
+.aside_tegs {
+  margin-top: 25px;
+  margin-bottom: 60px;
+}
+.post-aside-tegs li {
+  display: inline-block;
+}
+.post-aside-tegs a {
+  text-decoration: none;
+  display: block;
+  position: relative;
+  margin-right: 10px;
+  margin-bottom: 5px;
+  padding: 5px 9px;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: black;
+  border: 2px solid rgba(0, 0, 0, 0.05);
+}
+.post-aside-tegs a:focus {
+  outline: 2px solid #aac7d2;
+}
+/*--------------------------------------*/
+
+/* ### ДАШБОРД БОКОВОЙ ПАНЕЛИ ТЕМЫ ### */
+.aside_themes {
+  margin-top: 25px;
+}
+.post-aside-theme li {
+  height: 30px;
+  position: relative;
+  margin-bottom: 15px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+.post-aside-theme a {
+  padding: 3px;
+  font-size: 14px;
+  font-weight: bold;
+  color: black;
+  margin-bottom: 0px;
+  text-decoration: none;
+}
+.theme_counter {
+  font-size: 12px;
+  padding-top: 0px;
+  font-weight: bold;
+  color: #b59f5b;
+  margin-top: 0px;
+  position: absolute;
+  top: 0;
+}
+/*--------------------------------------*/
+
+/* ### МАГАЗИН ### */
+.shop {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 60px; 
+  padding: 0px 15px; 
+  box-sizing: border-box; 
+}
+
+.shop_all_slots {
+	display: flex;
+	width: 100%;
+	align-items: _flex-start;
+	
+}
+
+.slot_content {
+	display: flex;
+	width: 33%;
+	margin: 20px;
+	flex-direction: column;
+	align-items: center;
+	
+}
+
+.shop_picture_block {
+	width: 100%;
+	display: flex;
+	padding-left: 60px; /* картинки удалось "отцентрировать" только так. как сделать это автоматически?(картинки липнут к левой части своих контейнеров)*/
+	
+}
+
+.shop_main {
+	display: flex;
+	flex-wrap: wrap;
+	border: 2px solid #b59f5b;
+	margin-top: -30px;
+	padding: 15px;
+	flex-grow: 1;
+	align-content: flex-start;
+}
+.shop_main a:hover {
+  text-decoration: underline;
+}
+
+.post-main-head {
+	margin-top: 20px;
+}
+
+.shop-form {
+	display: flex;
+	width: 100%;
+	align-content: flex-end;
+	margin-top: 20px;
+}
+
+.shop-price-block {
+	margin-left: 5px;
+	
+}
+.shop-price-block p {
+	font-weight: bold;
+	line-height: 0.5;
+	font-size: 20px;
+}
+.old_price s {
+	font-size: 14px;
+}
+
+.button-shop {
+  /*кнопка В МАГАЗИН*/
+  border: none;
+  
+  background-color: #b59f5b;
+  width: 140px;
+  height: 45px;
+  font-family: inherit;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: white;
+  margin: auto;
+  margin-right: 5px;
+  cursor: pointer;
+}
+.button-shop:hover {
+  background-color: #323232;
+}
+
+/*--------------------------------------*/
+
+.footer {
+  /* ПОДВАЛ */
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0px 15px;
+  box-sizing: border-box;
+}
+
+.footer-social-icons {
+  display: flex; 
+  margin-top: 65px;
+  margin-bottom: 65px;
+  padding: 40px 0px;
+  box-sizing: border-box; 
+  justify-content: center;
+  background-color: #f4f7f6; 
+}
+
+a.social_icon {
+  display: flex;
+  margin-left: 15px;
+  margin-right: 15px;
+  width: 20px;
+  height: 20px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+a.twitter {
+  background-image: url("../svg/004-twitter.svg");
+}
+a.facebook {
+  background-image: url("../svg/002-facebook-logo.svg");
+}
+a.instagram {
+  background-image: url("../svg/005-instagram.svg");
+}
+a.tumblr {
+  background-image: url("../svg/003-tumblr.svg");
+}
+a.pinterest {
+  background-image: url("../svg/001-pinterest.svg");
+}
+
+.copyright-title {
+  margin: auto;
+  margin-bottom: 20px;
+  text-align: center;
+}
