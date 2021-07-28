@@ -6,32 +6,16 @@
       <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0"
    <title>курсовая работа по MQ-разделу</title>
       <link rel="stylesheet" type="text/css" href="css/style.css"> <!-- подключаем файл стилей -->
-	<style> <!-- состояние ТРЕНДОВ при повороте экрана -->
-		@media (max-width: 640px)  and  (orientation: portrait)  {  <!-- этот запрос не срабатывает. Почему? Продублировал его в css-файле, строка 674. -->
-			article.trend_block  {	width: 99%;}
-		}
-		@media (max-width: 640px)  and  (orientation: landscape)  {
-			article.trend_block  {	
-				width: 44%;
-				margin-left: auto;
-				margin-right: auto;
-			}
-		}
-		@media (min-width: 641px)  and  (max-width: 1200px)  and  (orientation: portrait)  {	
-			article.trend_block  {	width: 45%;}
-		}
-		@media (min-width: 641px)  and  (max-width: 1200px)  and  (orientation: landscape)  {
-			article.trend_block  {	width: 20%;}
-		}
-	</style> 
+	
 </head>
 
 <body>   
 
 <header class="welcome">
 	
-	<!-- <div class="popup-wrapper">
+	<div style="display: none;" class="popup-wrapper">
 		<div class="popup">
+			<button class="popup-close"></button>
 			<h2 class="popup-title">ваш фидбэк</h2>
 			
 				<form class="popup_form">
@@ -45,12 +29,18 @@
 						</label>
 					</div>
 					<div class="popup-form-group">
-						<label class="popup-checkbox-group">
+						<label class="popup-approval-group">
 							<span class="popup-select-label">Вы подписаны на e-mail рассылку?</span>
-							<input type="checkbox" class="popup-checkbox">
-							<span class="popup-checkbox-text">Да</span>
-							<input type="checkbox" class="popup-checkbox">
-							<span class="popup-checkbox-text">Нет</span>
+							<div class="popup-select-block">
+								<label>
+									<input type="radio" class="popup-approval" name="radiogroup_email" >
+									<span class="popup-approval-text">Да</span>
+								</label>
+								<label style="margin-left: 15px;">
+									<input type="radio" class="popup-approval" name="radiogroup_email" >
+									<span class="popup-approval-text">Нет</span>
+								</label>
+							</div>
 						</label>
 					</div>
 					<div class="popup-form-group">
@@ -64,10 +54,8 @@
 						<button class="button-popup">отправить</button>
 					</div>	
 				</form>
-				
-			
 		</div>
-	</div> -->
+	</div>
 	
 	<div class="main_label">
 	
@@ -85,7 +73,6 @@
 				<span class="menu__button-label">открыть меню</span>
 			</button>
 		</nav>
-				
 		<h1 class="welcome-title">блог о творчестве, спорте, и образе жизни</h1>
 	</div>
 
@@ -501,6 +488,7 @@
 				<div class="shop-form">
 					<span class="visually-hidden">форма покупки товара. слот2</span>
 					<div class="shop-price-block">
+						<p class="old_price"><s></s></p>
 						<p class="new_price">3500 &#8381;</p>
 					</div>
 					<a class="button-shop" href="" style="text-decoration: none">
