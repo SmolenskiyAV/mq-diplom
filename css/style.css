@@ -84,24 +84,40 @@ p {
 	background-color: white;
 	z-index: 3;
 	padding-top: 40px;
+	position: relative;
 }
-.popup-title {
-	
+.popup-close {
+	position: absolute;
+	background-image: url("../svg/form-x.svg");
+	background-color: rgba(0, 0, 0, 0.9);
+	border: none;
+	padding: auto;
+    width: 15px;
+	height: 15px;
+	top: -20px;
+	right: 0px;
+  	cursor: pointer;
 }
 .popup_form {
-	padding: 30px;
+	display: flex;
+	flex-direction: column;
+	padding: 30px 30px 0px;
+	justify-content: space-between;
+	height: 90%;
 }
-
 .popup-form-group {
-	
+	font-size: 13px;
 }
-
+option.every_day {
+		font-size: 13px;
+}
 .button-popup {
   border: none;
   padding: auto;
   background-color: #b59f5b;
   width: 100%;
   height: 45px;
+  width: 330px;
   font-family: inherit;
   font-size: 14px;
   text-transform: uppercase;
@@ -148,13 +164,13 @@ p {
   padding-left: 10px;
   padding-right: 25px;
   
-  margin: 0;
+  margin: 15px 0px 0px;
   
   border: 1px solid #cbd1d4;
   background-color: #f9f9f9;
   
-  font-size: 14px;
-  color: #333333;
+  font-size: 13px;
+  color: #333333; 
   
   background-image: url("../svg/form-arrows.svg");
   background-repeat: no-repeat;
@@ -165,48 +181,93 @@ p {
   outline: 2px solid #0f8fee;
   outline-offset: 4px;
 }
-
-.popup-checkbox-text {
+.popup-select-block {
+	padding: 10px 0px;
+}
+.popup-approval-text {
   display: inline-block;
 }
 
-.popup-checkbox-text::before {
+.popup-approval-text::before {
   content: "";
   display: inline-block;
   margin-right: 8px;
   width: 20px;
   height:20px;
-  background-image: urlurl("../svg/form-empty-circle.svg");
+  background-image: url("../svg/form-empty-circle.svg");
   background-repeat: no-repeat;
   background-size: 20px;
   background-position: center center;
   vertical-align: middle;
 }
  
-.popup-checkbox:checked ~ .popup-checkbox-text::before {
+.popup-approval:checked ~ .popup-approval-text::before {
   background-image: url("../svg/form-circle.svg");
 } 
-.popup-checkbox {
+.popup-approval {
   position: absolute;
   clip: rect(1px, 1px,1px, 1px);
   height: 1px;
   width: 1px;
+  
 } 
-.popup-checkbox:focus ~ .popup-checkbox-text::before {
-  outline: 2px solid #0f8fee;
-  outline-offset: 2px;
+.popup-approval:focus ~ .popup-approval-text::before {
+  cursor: pointer;
 }
 .popup-textarea {
+	box-sizing: border-box;
 	background-color: #f9f9f9;
+	font-size: 13px;
+	width: 100%;
+	height: 130px;
+	resize: none;
+	padding: 20px;
+	margin-top: 15px;
 }
 /*-------------------------------------*/
 
-.menu__button { /* МЕНЮ-БУРГЕР */
-    display: none;
-	position: relative;
-	right: 30px;
-	top: 25px;
-	cursor: pointer;
+			/* МЕНЮ-БУРГЕР */
+.menu__button {
+  display: none;
+  width: 1.4em;
+  height: 1em;  
+  border: none;
+  padding: 0;
+
+  background-color: transparent;
+  font-size: 25px;
+  position: relative;
+  text-indent: -9999px;
+  cursor: pointer;
+}
+
+.menu__button:before, .menu__button:after {
+  content:"";
+  width: 100%;
+  height: 20%;
+  background-color: #ffffff;  
+  position: absolute;
+  left: 0;
+}
+
+.menu__button:before {
+  top: 0;
+}
+
+.menu__button:after {
+  bottom: 0;
+}
+
+.menu__button-label {
+  width: 100%;
+  height: 20%;
+  margin-top: -0.1em;  
+
+  background-color: #ffffff;  
+
+  position: absolute;
+  left: 0;
+  top: 50%;
 }
 
 /* ### ТРЕНДЫ ### */
@@ -231,17 +292,14 @@ p {
 }
 .trends_content {
 	display: flex;
-	flex-wrap: wrap;
+	flex-wrap: nowrap;
 	height: 320px;
 	justify-content: center;
+	width: 100%;
 }
 
 article.trend_block {
   display: flex;
-  margin-right: 2px;
-  margin-left: 2px;
-  padding-right: 10px;
-  padding-left: 10px;
   padding-bottom: 10px;
   background-repeat: no-repeat;
   background-position: center center;
@@ -249,7 +307,7 @@ article.trend_block {
   background-color: #000000;
   position: relative;
   z-index: 0;
-  width: 22%;
+  width: 25%;
   align-items: flex-end;
 }
 article.a1 {
@@ -260,7 +318,7 @@ article.a2 {
 } 
 article.a3 {
   background-image: url("../images/trend3.jpg");
-} 
+}
 article.a4 {
   background-image: url("../images/trend4.jpg");
 } 
@@ -284,7 +342,7 @@ article.trend_block::after {
 	flex-direction: column; 
 	padding: 20px;
 	min-width: 50px;
-	
+	margin: 10px;
 }
 .trend-tegs {
 	width: 100%;
@@ -311,6 +369,7 @@ article.trend_block::after {
 .trend-title {
 	color: white;
 	font-size: 20px;
+	text-transform: uppercase;
 }
 .trend-title:hover {
   color: #b59f5b;
@@ -383,7 +442,7 @@ article.trend_block::after {
   padding: 5px;
 }
 .post-img {
-  width: 380px; 
+  max-width: 380px; 
   object-fit: contain;
 }
 .post_main_textblock {
@@ -687,6 +746,7 @@ article.trend_block::after {
 	margin-top: -35px;
 	padding: 15px;
 	flex-grow: 1;
+	padding: 25px;
 }
 .shop_main a:hover {
   text-decoration: underline;
@@ -701,11 +761,13 @@ article.trend_block::after {
 	width: 100%;
 	align-content: flex-end;
 	margin-top: 20px;
+	position: relative;
 }
 
 .shop-price-block {
 	margin-left: 5px;
-	
+	position: absolute;
+	bottom: 7px;
 }
 .shop-price-block p {
 	font-weight: bold;
@@ -812,6 +874,7 @@ a.pinterest {
 	}
 	.menu__button {
 		display: block;
+		right: 30px;
 	}
 	.trends_content {
 		justify-content: center;
@@ -823,8 +886,7 @@ a.pinterest {
 		font-size: 17px;
 	}
 	article.trend_block {
-		margin-right: 1px;
-		margin-left: 1px;
+		
 	}
 	.main_plus_aside {
 		margin-top: 100px; 
@@ -832,6 +894,17 @@ a.pinterest {
 	}
 	.post_main {
 		flex-wrap: wrap;
+		padding: 20px;
+		position:relative;
+		
+	}
+	.post_main:after{
+		position:absolute;
+		top:0;
+		left: 25px;
+		width:380px;
+		border-bottom: 3px solid rgba(0, 0, 0, 0.05);
+		content:"";
 	}
 	.main {
 		margin-right: 0px; 
@@ -905,6 +978,7 @@ a.pinterest {
 	.trends_content {
 		height: auto;
 		margin: auto;
+		flex-wrap: wrap;
 	}
 	article.trend_block  {	
 		margin: 0px;
@@ -918,11 +992,16 @@ a.pinterest {
 	}
 	.post_main {
 		flex-wrap: wrap;
-		margin-bottom: 60px;
+		margin-bottom: 35px;
+		padding: 20px;
+		border-bottom: 5px solid rgba(0, 0, 0, 0.05);
 	}
 	.post_main_pic {/*картинка поста в гл.блоке*/
 		margin: auto; 
 		padding: 0px;
+	}
+	.post-img {
+		width: 100%; 
 	}
 	.post-main-head {
 		font-size: 16px;
@@ -945,17 +1024,50 @@ a.pinterest {
 	}
 	.slot_content {
 		width: 100%;
+		margin-left: auto;
+		margin-right: auto;
 	}
 	.shop_main {
 		max-width: 315px;
-		min-width: 270px; 
+		min-width: 255px; 
 	}
 }
 	
-
+/*================================================================*/
 
 @media (max-width: 640px)  and  (orientation: portrait)  {
-		article.trend_block  {	width: 99%;}
-}/* в теле html-а, строка 10, запрос почему-то не срабатывает. Продублировал его здесь!*/
+		article.trend_block  {	
+			width: 100%;
+			margin-bottom: 2px;
+		}
+}
 
-/*================================================================*/
+
+@media ((min-width: 641px)  and  (max-width: 1200px)  and  (orientation: portrait)) or ((max-width: 640px)  and  (orientation: landscape))  {	
+			article.trend_block  {	
+				width: 50%;
+				box-sizing: border-box;
+				margin: 0;
+			}
+			.trends_content {	flex-wrap: wrap;}
+			article.a1 {	
+				border-right: 1px solid white;
+				border-bottom: 1px solid white;
+			}
+			article.a2 {	
+				border-left: 1px solid white;
+				border-bottom: 1px solid white;
+			}
+			article.a3 {	
+				border-right: 1px solid white;
+				border-top: 1px solid white;
+			}
+			article.a4 {	
+				border-left: 1px solid white;
+				border-top: 1px solid white;
+			}
+}
+		
+@media (min-width: 641px)  and  (max-width: 1200px)  and  (orientation: landscape)  {
+			article.trend_block  {	width: 25%;}
+}
