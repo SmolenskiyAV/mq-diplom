@@ -312,15 +312,21 @@ article.trend_block {
 }
 article.a1 {
   background-image: url("../images/trend1.jpg");
+  margin-right: 1px;
 } 
 article.a2 {
   background-image: url("../images/trend2.jpg");
+  margin-left: 1px;
+  margin-right: 1px;
 } 
 article.a3 {
   background-image: url("../images/trend3.jpg");
+   margin-left: 1px;
+   margin-right: 1px;
 }
 article.a4 {
   background-image: url("../images/trend4.jpg");
+  margin-left: 1px;
 } 
 
 article.trend_block::after {
