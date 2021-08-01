@@ -75,7 +75,7 @@ p {
 	left: 0;
 	background-color: rgba(0, 0, 0, 0.9);
 	display: flex;
-	z-index: 2;
+	z-index: 999; /* Почему сама форма .popup-wrapper и все её дочерние элементы не закрывают все остальные элементы сайта??? */
 }
 .popup {
 	width: 388px;
@@ -173,14 +173,11 @@ option.every_day {
   color: #333333; 
   
   background-image: url("../svg/form-arrows.svg");
+  background-size: 10px;
   background-repeat: no-repeat;
-  background-position: right 5px center;
+  background-position: right 10px center;
 }
 
-.popup-select:focus {
-  outline: 2px solid #0f8fee;
-  outline-offset: 4px;
-}
 .popup-select-block {
 	padding: 10px 0px;
 }
@@ -929,7 +926,7 @@ a.pinterest {
 	}
 	.shop_main {
 		max-width: 315px;
-		min-width: 270px; /* если нельзя уменьшать размер планшетных картинок магазинчика, то рамки с уменьшением разрешения экрана постепенно приближаются по своей ширине к ширине картинок. Я правильно понимаю?*/
+		min-width: 250px; /* если нельзя уменьшать размер планшетных картинок магазинчика, то рамки с уменьшением разрешения экрана постепенно приближаются по своей ширине к ширине картинок. Я правильно понимаю?*/
 	}
 }
 /*================================================================*/
@@ -1027,6 +1024,7 @@ a.pinterest {
 	}
 	.shop_all_slots {
 		flex-wrap: wrap;
+		max-width: 640px;
 	}
 	.slot_content {
 		width: 100%;
