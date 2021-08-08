@@ -13,50 +13,6 @@
 
 <header class="welcome">
 	
-	<div style="display: none;" class="popup-wrapper">
-		<div class="popup">
-			<button class="popup-close"></button>
-			<h2 class="popup-title">ваш фидбэк</h2>
-			
-				<form class="popup_form">
-				<span class="visually-hidden">всплывающая форма "ваш фидбэк"</span>
-					<div class="popup-form-group">
-						<label class="popup-select-group">
-							<span class="popup-select-label">Как часто вы заходите на сайт?</span>
-							<select class="popup-select" placeholder="Почти каждый день">
-								<option value="every_day">Каждый день...</option>
-							</select>
-						</label>
-					</div>
-					<div class="popup-form-group">
-						<label class="popup-approval-group">
-							<span class="popup-select-label">Вы подписаны на e-mail рассылку?</span>
-							<div class="popup-select-block">
-								<label>
-									<input type="radio" class="popup-approval" name="radiogroup_email" >
-									<span class="popup-approval-text">Да</span>
-								</label>
-								<label style="margin-left: 15px;">
-									<input type="radio" class="popup-approval" name="radiogroup_email" >
-									<span class="popup-approval-text">Нет</span>
-								</label>
-							</div>
-						</label>
-					</div>
-					<div class="popup-form-group">
-						<label class="popup-select-group">
-							<span class="popup-select-label">Расскажите, какой контент вы хотели бы видеть на нашем сайте?</span>
-							<textarea class="popup-textarea" placeholder="Может, больше рецептов?"></textarea>
-						</label>	
-					</div>
-				
-					<div class="popup-form-group">
-						<button class="button-popup">отправить</button>
-					</div>	
-				</form>
-		</div>
-	</div>
-	
 	<div class="main_label">
 	
 		<nav class="top-line">   <!-- топ-линейка, содержащая логотип и меню -->
@@ -573,5 +529,49 @@
 </footer>
 
 </body>
+
+<div style="display: none;" class="popup-wrapper"> <!-- POPUP-ФОРМА -->
+		<div class="popup">
+			<button class="popup-close"></button>
+			<h2 class="popup-title">ваш фидбэк</h2>
+			
+				<form class="popup_form">
+				<span class="visually-hidden">всплывающая форма "ваш фидбэк"</span>
+					<div class="popup-form-group">
+						<label class="popup-select-group">
+							<span class="popup-select-label">Как часто вы заходите на сайт?</span>
+							<select class="popup-select" placeholder="Почти каждый день">
+								<option value="every_day">Каждый день...</option>
+							</select>
+						</label>
+					</div>
+					<div class="popup-form-group">
+						<label class="popup-approval-group">
+							<span class="popup-select-label">Вы подписаны на e-mail рассылку?</span>
+							<div class="popup-select-block">
+								<label>
+									<input type="radio" class="popup-approval" name="radiogroup_email" >
+									<span class="popup-approval-text">Да</span>
+								</label>
+								<label style="margin-left: 15px;">
+									<input type="radio" class="popup-approval" name="radiogroup_email" >
+									<span class="popup-approval-text">Нет</span>
+								</label>
+							</div>
+						</label>
+					</div>
+					<div class="popup-form-group">
+						<label class="popup-select-group">
+							<span class="popup-select-label">Расскажите, какой контент вы хотели бы видеть на нашем сайте?</span>
+							<textarea class="popup-textarea" placeholder="Может, больше рецептов?"></textarea>
+						</label>	
+					</div>
+				
+					<div class="popup-form-group">
+						<button class="button-popup">отправить</button>
+					</div>	
+				</form>
+		</div>
+	</div>
 
 </html>
