@@ -69,9 +69,7 @@ p {
 			/* МЕНЮ-БУРГЕР */
 .menu__button {
   display: none;
-  /* width: 1.4em;
-  height: 1em;   */
-  width: 22px;
+  width: 23px;
   height: 20px;
   border: none;
   padding: 0;
@@ -289,11 +287,11 @@ article.trend_block::after {
 }
 .post_main_pic {
   /*картинка поста в гл.блоке*/
-  padding: 5px;
+  flex: none;
 }
 .post-img {
   max-width: 380px;
-  max-width: 100%;
+  width: 100%;
   object-fit: contain;
 }
 .post_main_textblock {
@@ -587,7 +585,6 @@ article.trend_block::after {
 
 .shop_picture_block {
 	display: flex;
-	
 }
 
 .shop_main {
@@ -849,7 +846,6 @@ option.every_day {
   clip: rect(1px, 1px,1px, 1px);
   height: 1px;
   width: 1px;
-  
 } 
 .popup-approval:focus ~ .popup-approval-text::before {
   cursor: pointer;
@@ -895,28 +891,18 @@ option.every_day {
 	.trend-title {
 		font-size: 17px;
 	}
-	article.trend_block {
-		
-	}
 	.main_plus_aside {
-		margin-top: 100px; 
-		 
+		margin-top: 50px; 
 	}
 	.post_main {
 		flex-wrap: wrap;
-		padding: 20px;
-		/* position:relative; */
 		border-bottom: 3px solid rgba(0, 0, 0, 0.05);
-		
+		margin-left: 15px; /* добавляем отступ, чтобы соответствовать планшетному макету*/
+		margin-right: 15px; /* добавляем отступ, чтобы соответствовать планшетному макету при разрешениях менее 740*/
 	}
-	/* .post_main:after{
-		position:absolute;
-		top:0;
-		left: 25px;
-		width:380px;
-		border-bottom: 3px solid rgba(0, 0, 0, 0.05);
-		content:"";
-	} */
+	.post_main_pic {
+		flex: initial; /* убираем flex:none чтобы боковая панель не "налезала" на картинку при оч.маленьких разрешениях экрана */
+	}
 	.post_main_textblock {
 		padding-left: 0px;
 		margin-left: 0px; 
@@ -931,7 +917,6 @@ option.every_day {
 	}
 	.shop_all_slots {
 		flex-wrap: wrap;
-		
 	}
 	.slot_content {
 		width: 50%;
@@ -949,6 +934,7 @@ option.every_day {
 		max-width: 315px;
 		min-width: 245px; /* если нельзя уменьшать размер планшетных картинок магазинчика, то рамки с уменьшением разрешения экрана постепенно приближаются по своей ширине к ширине картинок. */
 	}
+	
 }
 /*================================================================*/
 
@@ -959,8 +945,6 @@ option.every_day {
 		padding: 0px;
 		height: 640px;
 		width: 100%; 
-		
-
 	}
 	.main_plus_aside {
 		max-width: 640px;
@@ -990,7 +974,6 @@ option.every_day {
 	.menu__button { /* МЕНЮ-БУРГЕР */
 		display: block;
 		right: -35vw;
-		
 	}
 	.top-line {
 		max-width: 640px;
@@ -1017,13 +1000,15 @@ option.every_day {
 	}
 	.post_main {
 		flex-wrap: wrap;
+		padding-left: 15px;
+		padding-right: 15px;
 		margin-bottom: 35px;
-		padding: 20px;
 		border-bottom: 5px solid rgba(0, 0, 0, 0.05);
 	}
 	.post_main_pic {/*картинка поста в гл.блоке*/
 		margin: auto; 
 		padding: 0px;
+		flex: initial; 
 	}
 	.post-img {
 		width: 100%; 
