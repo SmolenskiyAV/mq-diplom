@@ -1,3 +1,4 @@
+			/*#### ver.7  22.08.21 ####*/
 @font-face {
   font-family: OpenSans;
   src: url("../fonts/OpenSans-Regular.woff");
@@ -70,7 +71,7 @@ p {
 .menu__button {
   display: none;
   width: 23px;
-  height: 20px;
+  height: 15px; /* корректировка п.1 змаечаний от 19.08.21 */
   border: none;
   padding: 0;
 
@@ -91,7 +92,7 @@ p {
 }
 
 .menu__button:before {
-  top: 0;
+  top: -2px; /* корректировка п.1 змаечаний от 19.08.21 */
 }
 
 .menu__button:after {
@@ -284,6 +285,7 @@ article.trend_block::after {
 .post_main {
   display: flex;
   margin-bottom: 15px; 
+  padding-bottom: 25px; /* корректировка п.2 змаечаний от 19.08.21 */
 }
 .post_main_pic {
   /*картинка поста в гл.блоке*/
@@ -1000,8 +1002,8 @@ option.every_day {
 	}
 	.post_main {
 		flex-wrap: wrap;
-		padding-left: 15px;
-		padding-right: 15px;
+		padding-left: _15px; /* корректировка п.3 змаечаний от 19.08.21 */
+		padding-right: _15px; /* корректировка п.3 змаечаний от 19.08.21 */
 		margin-bottom: 35px;
 		border-bottom: 5px solid rgba(0, 0, 0, 0.05);
 	}
@@ -1023,7 +1025,7 @@ option.every_day {
 	.main {
 		margin: auto; 
 		width: 100%;
-		padding: 0px;
+		padding: 0px 15px; /* корректировка п.3 змаечаний от 19.08.21 */
 	}
 	.aside {
 		margin: auto;
