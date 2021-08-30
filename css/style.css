@@ -71,7 +71,7 @@ p {
 .menu__button {
   display: none;
   width: 23px;
-  height: 15px; /* корректировка п.1 змаечаний от 19.08.21 */
+  height: 15px; 
   border: none;
   padding: 0;
 
@@ -92,7 +92,7 @@ p {
 }
 
 .menu__button:before {
-  top: -2px; /* корректировка п.1 змаечаний от 19.08.21 */
+  top: -2px; 
 }
 
 .menu__button:after {
@@ -285,7 +285,7 @@ article.trend_block::after {
 .post_main {
   display: flex;
   margin-bottom: 15px; 
-  padding-bottom: 25px; /* корректировка п.2 змаечаний от 19.08.21 */
+  padding-bottom: 25px; 
 }
 .post_main_pic {
   /*картинка поста в гл.блоке*/
@@ -488,7 +488,6 @@ article.trend_block::after {
 .button-email {
   /*кнопка ПОДПИСАТЬСЯ*/
   border: none;
-  padding: auto;
   background-color: #b59f5b;
   width: 100%;
   height: 45px;
@@ -732,8 +731,7 @@ a.pinterest {
 	background-image: url("../svg/form-x.svg");
 	background-color: rgba(0, 0, 0, 0.9);
 	border: none;
-	padding: auto;
-    width: 15px;
+	width: 15px;
 	height: 15px;
 	top: -20px;
 	right: 0px;
@@ -754,7 +752,6 @@ option.every_day {
 }
 .button-popup {
   border: none;
-  padding: auto;
   background-color: #b59f5b;
   width: 100%;
   height: 45px;
@@ -1002,8 +999,6 @@ option.every_day {
 	}
 	.post_main {
 		flex-wrap: wrap;
-		padding-left: _15px; /* корректировка п.3 змаечаний от 19.08.21 */
-		padding-right: _15px; /* корректировка п.3 змаечаний от 19.08.21 */
 		margin-bottom: 35px;
 		border-bottom: 5px solid rgba(0, 0, 0, 0.05);
 	}
@@ -1025,7 +1020,7 @@ option.every_day {
 	.main {
 		margin: auto; 
 		width: 100%;
-		padding: 0px 15px; /* корректировка п.3 змаечаний от 19.08.21 */
+		padding: 0px 15px; 
 	}
 	.aside {
 		margin: auto;
@@ -1052,15 +1047,52 @@ option.every_day {
 	
 /*================================================================*/
 
-@media (max-width: 640px)  and  (orientation: portrait)  {
+@media (max-width: 640px)  {
 		article.trend_block  {	
 			width: 100%;
 			margin-bottom: 2px;
 		}
 }
 
+@media (max-width: 641px)  and  (orientation: landscape) {	
+			article.trend_block  {	
+				width: 50%;
+				box-sizing: border-box;
+				margin: 0;
+			}
+			.trends_content {	flex-wrap: wrap;}
+			article.a1 {	
+				background-position: bottom 1px right 1px; /* смещение бэкграунд-изображения в блоке1 на величину требуемого зазора */
+				border-right: 1px solid white; /* перекрытие обнажившегося тёмного слоя бэкграунда белым цветом */
+				border-bottom: 1px solid white; 
+				padding-right: 1px; /* смещение контента блока на величину зазора */
+				padding-bottom: 1px;
+			}
+			article.a2 {	
+				background-position: bottom 1px left 1px; /* смещение бэкграунд-изображения в блоке2 на величину требуемого зазора */
+				border-left: 1px solid white;
+				border-bottom: 1px solid white;
+				padding-left: 1px;
+				padding-bottom: 1px;
+			}
+			article.a3 {
+				background-position: top 1px right 1px; /* смещение бэкграунд-изображения в блоке3 на величину требуемого зазора */
+				border-right: 1px solid white;
+				border-top: 1px solid white;
+				padding-right: 1px;
+				padding-top: 1px;
+			}
+			article.a4 {
+				background-position: top 1px left 1px; /* смещение бэкграунд-изображения в блоке4 на величину требуемого зазора */
+				border-left: 1px solid white;
+				border-top: 1px solid white;
+				padding-left: 1px;
+				padding-top: 1px;
+			}
+}
 
-@media ((min-width: 641px)  and  (max-width: 1200px)  and  (orientation: portrait)) or ((max-width: 640px)  and  (orientation: landscape))  {	
+
+@media (min-width: 641px)  and  (max-width: 1200px) and  (orientation: portrait) {	
 			article.trend_block  {	
 				width: 50%;
 				box-sizing: border-box;
@@ -1097,6 +1129,6 @@ option.every_day {
 			}
 }
 		
-@media (min-width: 641px)  and  (max-width: 1200px)  and  (orientation: landscape)  {
+@media (min-width: 641px)  and  (max-width: 1200px) and  (orientation: landscape) {
 			article.trend_block  {	width: 25%;}
 }
